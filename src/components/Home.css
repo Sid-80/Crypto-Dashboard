@@ -1,0 +1,117 @@
+.container-1{
+    height: 100vh;
+    background-color: rgba(239, 227, 227, 0.82);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+.card1 {
+    text-align: center;
+    border-radius: 10px;
+    margin: 2.5%;
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.909);
+    box-shadow: 10px 10px 10px 10px rgba(229, 222, 222, 0.576);
+}
+.card1 h1{
+    padding-bottom: -15px;
+    padding-top: 25px;
+    font-family: 'Alkalami', serif;
+}
+.card2{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: rgb(208, 195, 195);
+}
+.card2 div{
+    padding: 10px;
+    text-align: center;
+}
+.cards{
+    text-align: center;
+}
+.cards h1{
+    font-family: 'Alkalami', serif;
+}
+.trending{
+    padding: 1%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+}
+.card{
+    padding: 0.5%;
+}
+.card-body h6{
+    font-weight: bolder;
+}
+.search{
+    font-family: 'Alkalami', serif;
+    font-weight: bolder;
+    margin: 4%;
+    margin-top: -4%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+}
+.search_but{
+    padding: 10px;
+    padding-top: 15px;
+    border: 0;
+    background-color: rgb(192, 192, 242);
+    width: 120px;
+    border-radius: 10px;
+    
+}
+.search_but:hover{
+    background-color: rgba(82, 82, 203, 0.793);
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px 10px rgba(213, 200, 200, 0.651);
+}
+@media only screen and (max-width: 600px){
+    .container-1{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card2{
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+    .card1{
+        margin-top: 3%;
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 90%;
+    }
+    .card1 h1{
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+    .trending{
+        padding: 1%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        width: 75%;
+    }
+    .cards h1{
+        margin: 5%;
+        padding-top: 5%;
+    }
+    .search{
+        margin-top: 5%;
+    }
+}
