@@ -17,7 +17,7 @@ const Home = () => {
         getData();
     },[]);
 
-    // console.log(trendingCryptoData);
+    console.log(trendingCryptoData);
     return(
         <>
         <motion.div 
