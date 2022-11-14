@@ -26,10 +26,6 @@ const Home = () => {
             animate={{width:"100%"}}
             exit={{x:window.innerWidth, transition:{duration : 0.2}}}
         >
-            <div className="search">
-                <h3>SEARCH ABOUT ANY CRYPTO</h3>
-                <button className="search_but"><NavLink className="nav-link" to="/search">Search</NavLink></button>
-            </div>
             <div className="cards">
                 <hr className="hr1" />
                 <h1>Trending Crypto Coins</h1>

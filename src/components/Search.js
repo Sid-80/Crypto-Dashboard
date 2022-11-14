@@ -44,7 +44,6 @@ const Search = () => {
             animate={{width:"100%"}}
             exit={{x:window.innerWidth, transition:{duration : 0.2}}}
         >
-            <button className="back_but"><NavLink className="nav-link" to="/">BACK</NavLink></button>
             <div className="container_1">
                 <div class="input-group mb-3 inputDiv">
                     <input type="text" className="searchInput form-control" placeholder="Bitcoin,ethereum,tether,..." onChange={inputData} aria-label="Recipient's username" aria-describedby="button-addon2" />
@@ -73,6 +72,7 @@ const Search = () => {
                                             <p className="">Market Rank : {curEle.market_cap_rank}</p>
                                             <p className="">Symbol : {curEle.symbol}</p>
                                         </div>
+                                        <hr className="hr3"/>
                             </div>
                             </>
                         )
