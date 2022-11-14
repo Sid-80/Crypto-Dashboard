@@ -46,8 +46,8 @@ const Search = () => {
         >
             <button className="back_but"><NavLink className="nav-link" to="/">BACK</NavLink></button>
             <div className="container_1">
-                <div class="input-group mb-3 in">
-                    <input type="text" className="form-control" placeholder="Bitcoin,.." onChange={inputData} aria-label="Recipient's username" aria-describedby="button-addon2" />
+                <div class="input-group mb-3 inputDiv">
+                    <input type="text" className="searchInput form-control" placeholder="Bitcoin,ethereum,tether,..." onChange={inputData} aria-label="Recipient's username" aria-describedby="button-addon2" />
                     <button className="btn btn-info" type="button" onClick={submitInput} id="button-addon2">🔍</button>
                 </div>
             </div>
@@ -57,28 +57,27 @@ const Search = () => {
                 animate={{opacity:1}}
                 exit={{opacity:0}}
             >
-                <div class="container text-center">
-                <div class="row row-cols-5">
+                <div class="SearchDataContainer">
                 {
                     Array.isArray(searchedData) ? 
                     searchedData.map((curEle,index)=>{
-                        return(
-                            <div class="col">
-                                <div className="card shadow-lg p-3 mb-5 bg-body rounded">
-                                            <img src={curEle.large} className="card-img-top" alt="..." />
-                                        <div className="card-body">
-                                            <h6 className="card-title">{curEle.name}</h6>
+                        return(<>
+                            <div class="searchCard">
+                                        <div>
+                                            <img src={curEle.large} className="card-img-top" height="60" alt="..." />
                                         </div>
-                                        <ul class="list-group list-group-flush">
-                                            <li className="list-group-item">Market Rank : {curEle.market_cap_rank}</li>
-                                            <li className="list-group-item">Symbol : {curEle.symbol}</li>
-                                        </ul>
-                                </div>
+                                        <div className="name">
+                                            <h5 className="">{curEle.name}</h5>
+                                        </div>
+                                        <div>
+                                            <p className="">Market Rank : {curEle.market_cap_rank}</p>
+                                            <p className="">Symbol : {curEle.symbol}</p>
+                                        </div>
                             </div>
+                            </>
                         )
                     }) : null
                 }
-                </div>
                 </div>
             </motion.div>
         </motion.div>
